@@ -1,6 +1,6 @@
 package com.henryflores.parcial01.data.models
 
-data class ItemModel(
+data class FruitModel(
     val name: String
-    // TODO: Create attributes
+    val color: String
 )
