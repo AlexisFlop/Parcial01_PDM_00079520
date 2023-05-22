@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fruitsTableFragment">
+
+    <fragment
+        android:id="@+id/fruitsTableFragment"
+        android:name="com.example.parcial01alexisflores.ui.fruit.fruitstable.FruitsTableFragment"
+        android:label="fragment_fruits_table"
+        tools:layout="@layout/fragment_fruits_table" >
+        <action
+            android:id="@+id/action_fruitsTableFragment_to_newFruitFragment"
+            app:destination="@id/newFruitFragment" />
+        <action
+            android:id="@+id/action_fruitsTableFragment_to_fruitFragment"
+            app:destination="@id/fruitFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fruitFragment"
+        android:name="com.example.parcial01alexisflores.ui.fruit.FruitFragment"
+        android:label="fragment_fruit"
+        tools:layout="@layout/fragment_fruit" />
+    <fragment
+        android:id="@+id/newFruitFragment"
+        android:name="com.example.parcial01alexisflores.ui.fruit.newfruit.NewFruitFragment"
+        android:label="fragment_new_fruit"
+        tools:layout="@layout/fragment_new_fruit" >
+        <action
+            android:id="@+id/action_newFruitFragment_to_fruitsTableFragment"
+            app:destination="@id/fruitsTableFragment" />
+    </fragment>
+</navigation>
